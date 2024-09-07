@@ -18,11 +18,15 @@ public class ProductService {
     public Product createProduct(ProductCreationRequest request){
         Product product = new Product();
 
+        if(productRepository.existsByProductName(request.getProductName()))
+            throw new RuntimeException("Product Existed !");
+
         product.setProductName(request.getProductName());
+
         product.setDescription(request.getDescription());
         product.setCategoryName(request.getCategoryName());
         product.setQuantity(request.getQuantity());
-        product.setSKU(request.getSKU());
+        product.setSku(request.getSku());
         product.setCreatedDate(request.getCreatedDate());
 
         return productRepository.save(product);

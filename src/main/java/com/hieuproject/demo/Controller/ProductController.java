@@ -5,6 +5,7 @@ import com.hieuproject.demo.Dto.Request.ProductCreationRequest;
 import com.hieuproject.demo.Dto.Request.ProductUpdateRequest;
 import com.hieuproject.demo.Entity.Product;
 import com.hieuproject.demo.Service.ProductService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +18,7 @@ public class ProductController {
     @Autowired private ProductService productService;
 
     @PostMapping
-    Product createProduct(@RequestBody ProductCreationRequest request){
+    Product createProduct(@RequestBody @Valid ProductCreationRequest request){
         return productService.createProduct(request);
     }
 

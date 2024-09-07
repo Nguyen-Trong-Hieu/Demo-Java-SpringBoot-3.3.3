@@ -1,60 +1,70 @@
 package com.hieuproject.demo.Dto.Request;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 
 public class ProductCreationRequest {
-    private String ProductName;
-    private String Description;
-    private String CategoryName;
-    private String SKU;
-    private int Quantity;
-    private LocalDate CreatedDate;
+
+    @Size(min = 8, message = "Product Name must be at least 8 characters !")
+    private String productName;
+
+    @NotNull
+    private String description;
+    private String categoryName;
+    @NotNull
+    private String sku;
+    @NotNull
+    private int quantity;
+    @NotNull
+    private LocalDate createdDate;
 
     public String getProductName() {
-        return ProductName;
+        return productName;
     }
 
     public void setProductName(String productName) {
-        ProductName = productName;
+        this.productName = productName;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getCategoryName() {
-        return CategoryName;
+        return categoryName;
     }
 
     public void setCategoryName(String categoryName) {
-        CategoryName = categoryName;
+        this.categoryName = categoryName;
     }
 
-    public String getSKU() {
-        return SKU;
+    public String getSku() {
+        return sku;
     }
 
-    public void setSKU(String SKU) {
-        this.SKU = SKU;
+    public void setSku(String sku) {
+        this.sku = sku;
     }
 
     public int getQuantity() {
-        return Quantity;
+        return quantity;
     }
 
     public void setQuantity(int quantity) {
-        Quantity = quantity;
+        this.quantity = quantity;
     }
 
     public LocalDate getCreatedDate() {
-        return CreatedDate;
+        return createdDate;
     }
 
     public void setCreatedDate(LocalDate createdDate) {
-        CreatedDate = createdDate;
+        this.createdDate = createdDate;
     }
 }

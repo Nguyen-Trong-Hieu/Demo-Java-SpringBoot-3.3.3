@@ -3,40 +3,40 @@ package com.hieuproject.demo.Dto.Request;
 import java.time.LocalDate;
 
 public class ProductUpdateRequest {
-    private String ProductName;
-    private String Description;
-    private String CategoryName;
-    private int Quantity;
+    private String productName;
+    private String description;
+    private String categoryName;
+    private int quantity;
 
     public String getProductName() {
-        return ProductName;
+        return productName;
     }
 
     public void setProductName(String productName) {
-        ProductName = productName;
+        this.productName = productName;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getCategoryName() {
-        return CategoryName;
+        return categoryName;
     }
 
     public void setCategoryName(String categoryName) {
-        CategoryName = categoryName;
+        this.categoryName = categoryName;
     }
 
     public int getQuantity() {
-        return Quantity;
+        return quantity;
     }
 
     public void setQuantity(int quantity) {
-        Quantity = quantity;
+        this.quantity = quantity;
     }
 }

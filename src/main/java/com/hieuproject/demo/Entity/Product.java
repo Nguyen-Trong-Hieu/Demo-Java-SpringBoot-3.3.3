@@ -18,12 +18,13 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long Id;
-    private String ProductName;
-    private String Description;
-    private String CategoryName;
-    private String SKU;
-    private int Quantity;
-    private LocalDate CreatedDate;
+    @Column(name = "productName")
+    private String productName;
+    private String description;
+    private String categoryName;
+    private String sku;
+    private int quantity;
+    private LocalDate createdDate;
 
     public Long getId() {
         return Id;
@@ -34,50 +35,50 @@ public class Product {
     }
 
     public String getProductName() {
-        return ProductName;
+        return productName;
     }
 
     public void setProductName(String productName) {
-        ProductName = productName;
+        this.productName = productName;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getCategoryName() {
-        return CategoryName;
+        return categoryName;
     }
 
     public void setCategoryName(String categoryName) {
-        CategoryName = categoryName;
+        this.categoryName = categoryName;
     }
 
-    public String getSKU() {
-        return SKU;
+    public String getSku() {
+        return sku;
     }
 
-    public void setSKU(String SKU) {
-        this.SKU = SKU;
+    public void setSku(String sku) {
+        this.sku = sku;
     }
 
-    public int getQuantity() {
-        return Quantity;
+    public int getSuantity() {
+        return quantity;
     }
 
-    public void setQuantity(int quantity) {
-        Quantity = quantity;
+    public void setQuantity(int suantity) {
+        this.quantity = suantity;
     }
 
-    public LocalDate getCreatedDate() {
-        return CreatedDate;
+    public LocalDate getSreatedDate() {
+        return createdDate;
     }
 
-    public void setCreatedDate(LocalDate createdDate) {
-        CreatedDate = createdDate;
+    public void setCreatedDate(LocalDate sreatedDate) {
+        this.createdDate = sreatedDate;
     }
 }
